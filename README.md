@@ -31,7 +31,7 @@ Currently there are no upgrade notices.
 * Classes applied to the source <ul> tag will be copied to the resulting gallery <div> 
 * New options:
 	- show_overlays
-		- BOOLEAN: flag to indicate whether to show or hide panel overlays
+	- BOOLEAN: flag to indicate whether to show or hide panel overlays
 
 #### Version 3.0 beta 2 - 2011-03-14
 * Class names altered to be less generic, avoid interference from other CSS
@@ -39,10 +39,8 @@ Currently there are no upgrade notices.
 * Added 'filter:inherit' CSS rule to panels to combat IE8 which prevents fade animations from working
 * Changed navigation images to <div> tags with images as backgrounds. Navigation images can now be defined in CSS
 * Removed options:
-	- nav_theme
-		- no longer necessary as navigation images are defined in CSS
-	- theme_format
-		- no longer necessary as navigation images are defined in CSS	
+	- nav_theme - no longer necessary as navigation images are defined in CSS
+	- theme_format - no longer necessary as navigation images are defined in CSS	
 
 #### Version 3.0 beta 1 - 2011-03-10
 * Setting transition interval to 0 prevents automated transitions instead of causing instant transitions
