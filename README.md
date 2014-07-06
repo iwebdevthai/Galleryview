@@ -1,27 +1,20 @@
-/*!-----------------------------------------------------------------------------------
 
-	GalleryView - https://github.com/bhubbard/GalleryView
-	Version: 3.1.0
-	
-	License: GNU General Public License version 3.0
-	License URI: http://www.gnu.org/licenses/gpl-3.0.html
-	
-	This version of Galleryview is based off of the 
-	
------------------------------------------------------------------------------------*/
-
+# GalleryView
+### https://github.com/bhubbard/GalleryView
+---
 
 ## Description
+Galleryview is a photo gallery plugin for jQuery. It offers several features such as a filmstrip, and now support to be responsive.
 
 ## Contributors
 * Jack Anderson (jackwanders)
 * Jeroen (jeroenpx)
 
 ## Frequently Asked Questions
-FAQ Section
+This section will be updated soon.
 
 ## Upgrade Notice
-Upgrade Notice
+Currently there are no upgrade notices.
 
 ## Changelog
 
