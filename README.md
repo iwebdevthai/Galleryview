@@ -1,10 +1,10 @@
 
 # GalleryView
-### https://github.com/bhubbard/GalleryView
 ---
 
+
 ## Description
-Galleryview is a photo gallery plugin for jQuery. It offers several features such as a filmstrip, and now support to be responsive.
+Galleryview is a photo gallery plugin for jQuery. It offers several features such as a filmstrip, and now support to be responsive. You can find the latest version at https://github.com/bhubbard/GalleryView
 
 ## Contributors
 * Jack Anderson (jackwanders)
@@ -31,8 +31,8 @@ Currently there are no upgrade notices.
 * Classes applied to the source <li> tags will be copied to both the appropriate filmstrip frame and panel
 * Classes applied to the source <ul> tag will be copied to the resulting gallery <div> 
 * New options:
-	- show_overlays
-		- BOOLEAN: flag to indicate whether to show or hide panel overlays
+	* show_overlays
+		* BOOLEAN: flag to indicate whether to show or hide panel overlays
 
 #### Version 3.0 beta 2 - 2011-03-14
 * Class names altered to be less generic, avoid interference from other CSS
