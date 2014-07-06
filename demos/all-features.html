@@ -5,21 +5,21 @@
 <title>GalleryView - Full Feature Demo</title>
 
 <!-- First, add jQuery (and jQuery UI if using custom easing or animation -->
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
 
 <!-- Second, add the Timer and Easing plugins -->
-<script type="text/javascript" src="../js/jquery.timers-1.2.js"></script>
-<script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../dist/js/jquery.timers-1.2.js"></script>
+<script type="text/javascript" src="../dist/js/jquery.easing.1.3.js"></script>
 
 <!-- Third, add the GalleryView Javascript and CSS files -->
-<script type="text/javascript" src="../js/jquery.galleryview-3.0-dev.js"></script>
-<link type="text/css" rel="stylesheet" href="../css/jquery.galleryview-3.0-dev.css" />
+<script type="text/javascript" src="../dist/js/jquery.galleryview.min.js"></script>
+<link type="text/css" rel="stylesheet" href="../dist/css/galleryview.min.css" />
 
 <!-- Lastly, call the galleryView() function on your unordered list(s) -->
 <script type="text/javascript">
-	$(function(){
-		var gallerylu = $('#myGallery').galleryView({
+	jQuery(function(){
+		var gallerylu = jQuery('#myGallery').galleryView({
 		transition_speed: 2000, 		//INT - duration of panel/frame transition (in milliseconds)
 		transition_interval: 4000, 		//INT - delay between panel/frame transitions (in milliseconds)
 		easing: 'swing', 				//STRING - easing method to use for animations (jQuery provides 'swing' or 'linear', more available with jQuery UI or Easing plugin)
@@ -54,22 +54,22 @@
 		});
 		
 		var isDelayedGalleryInitialized = false;
-		$('#btn').click(function(){
+		jQuery('#btn').click(function(){
 			if(!isDelayedGalleryInitialized){
-				$('.gv_galleryWrap').hide();
-				$('#delayedGallery').galleryView();
+				jQuery('.gv_galleryWrap').hide();
+				jQuery('#delayedGallery').galleryView();
 				isDelayedGalleryInitialized = true;
 			}else{
-				$('.gv_galleryWrap').toggle();
+				jQuery('.gv_galleryWrap').toggle();
 			}
 		});
 		
-		$('#scalebutton').click(function(){
+		jQuery('#scalebutton').click(function(){
       gallerylu.resizeGalleryView(
-              Number($("#input_new_panel_width").val()), 
-              Number($("#input_new_panel_height").val()),
-              Number($("#input_new_frame_width").val()), 
-              Number($("#input_new_frame_height").val()));
+              Number(jQuery("#input_new_panel_width").val()), 
+              Number(jQuery("#input_new_panel_height").val()),
+              Number(jQuery("#input_new_frame_width").val()), 
+              Number(jQuery("#input_new_frame_height").val()));
     });
     
 	});
@@ -98,9 +98,9 @@
             <li><img data-frame="http://www.spaceforaname.com/galleryview/img/photos/crops/bp49.jpg" src="http://www.spaceforaname.com/galleryview/img/photos/bp49.jpg" title="By The Wind of Chance" data-description="I was doing my touristic duties to photograph the Pyramids, and I hear my professor shouting. Next thing you know my entire class and some police officers were running to catch my professors hat. It actually wasn't until later that night when scrolling through my photos that I realized I captured this gem. Great Pyramid of Giza. (Photo and caption by John Head/Places/National Geographic Photo Contest)" />
     </ul>
     <ul id="delayedGallery" class="galleryView">
-    	    <li><img data-original="http://www.spaceforaname.com/galleryview/img/photos/bp52.jpg" src="../css/grey.gif" />
-            <li><img data-original="http://www.spaceforaname.com/galleryview/img/photos/bp53.jpg" src="../css/grey.gif" />
-            <li><img data-original="http://www.spaceforaname.com/galleryview/img/photos/bp54.jpg" src="../css/grey.gif" />
+    	    <li><img data-original="http://www.spaceforaname.com/galleryview/img/photos/bp52.jpg" src="../dist/images/grey.gif" />
+            <li><img data-original="http://www.spaceforaname.com/galleryview/img/photos/bp53.jpg" src="../dist/images/grey.gif" />
+            <li><img data-original="http://www.spaceforaname.com/galleryview/img/photos/bp54.jpg" src="../dist/images/grey.gif" />
     </ul>
     <button id="btn">Toggle Gallery</button>
     

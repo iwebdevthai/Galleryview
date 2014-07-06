@@ -1,6 +1,12 @@
 ﻿GalleryView - jQuery Content Gallery Plugin
 Author: 		Jack Anderson
 
+Version 3.1.0 - 2014-07-05
+----------------------------------------
+
+* Offering Minified Versions of Galleryview CSS & JS
+* Re-Organizing Files in the Repo
+
 Version 3.0 DEV - 2012-03-21
 ----------------------------------------
 
