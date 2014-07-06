@@ -14,8 +14,8 @@
 ## Description
 
 ## Contributors
-Jack Anderson (jackwanders)
-Jeroen (jeroenpx)
+* Jack Anderson (jackwanders)
+* Jeroen (jeroenpx)
 
 ## Frequently Asked Questions
 FAQ Section
