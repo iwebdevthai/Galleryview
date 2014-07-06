@@ -1,5 +1,6 @@
-﻿/**
+﻿/*!
  * jQuery.timers - Timer abstractions for jQuery
+ * http://jquery.offput.ca/every/
  * Written by Blair Mitchelmore (blair DOT mitchelmore AT gmail DOT com)
  * Licensed under the WTFPL (http://sam.zoy.org/wtfpl/).
  * Date: 2009/10/16

@@ -21,6 +21,7 @@ Currently there are no upgrade notices.
 * Offering Minified Versions of Galleryview CSS & JS
 * Re-Organizing Files in the Repo
 * Responsive Code Provided by Jerome
+* Separated Themes Into Separate Sass Files & Image Folders
 
 #### Version 3.0 beta 3 - 2011-03-15
 * Anchor tags in source markup now transfer to both the filmstrip and the panel

@@ -11,6 +11,8 @@
 	
 -----------------------------------------------------------------------------------*/
 
+@import 'themes/galleryview.theme.light.scss';
+
 /* GALLERY LIST */
 .galleryView { display: none; }
 
@@ -40,7 +42,6 @@
 	position: absolute; 
 	width: 20px; 
 	height: 20px; 
-	background: url(../images/themes/light/info.png) #222; 
 	cursor: pointer;
 	z-index: 200;
 }
@@ -158,35 +159,29 @@
 	height: 30px;
 	width: 30px;
 	cursor: pointer;
-	background: url(../images/themes/light/play-big.png) top left no-repeat;
 }
 .gv_navPause {
 	height: 30px;
 	width: 30px;
 	cursor: pointer;
-	background: url(../images/themes/light/pause-big.png) top left no-repeat;
 }
 .gv_navNext {
 	height: 20px;
 	width: 20px;
 	cursor: pointer;
-	background: url(../images/themes/light/next.png) top left no-repeat;
 }
 .gv_navPrev {
 	height: 20px;
 	width: 20px;
 	cursor: pointer;
-	background: url(../images/themes/light/prev.png) top right no-repeat;
 }
 .gv_panelNavNext {
 	height: 20px;
 	width: 20px;
 	cursor: pointer;
-	background: url(../images/themes/light/panel-next.png) top left no-repeat;
 }
 .gv_panelNavPrev {
 	height: 20px;
 	width: 20px;
 	cursor: pointer;
-	background: url(../images/themes/light/panel-prev.png) top right no-repeat;
 }

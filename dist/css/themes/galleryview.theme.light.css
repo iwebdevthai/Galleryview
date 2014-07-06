@@ -1,0 +1,26 @@
+/*-----------------------------------------------------------------------------------
+
+	GalleryView Light Theme
+	Version: 3.1.0
+	
+-----------------------------------------------------------------------------------*/
+.gv_showOverlay {
+  background: url(../images/themes/light/info.png) #222222; }
+
+.gv_navPlay {
+  background: url(../images/themes/light/play-big.png) top left no-repeat; }
+
+.gv_navPause {
+  background: url(../images/themes/light/pause-big.png) top left no-repeat; }
+
+.gv_navNext {
+  background: url(../images/themes/light/next.png) top left no-repeat; }
+
+.gv_navPrev {
+  background: url(../images/themes/light/prev.png) top right no-repeat; }
+
+.gv_panelNavNext {
+  background: url(../images/themes/light/panel-next.png) top left no-repeat; }
+
+.gv_panelNavPrev {
+  background: url(../images/themes/light/panel-prev.png) top right no-repeat; }
