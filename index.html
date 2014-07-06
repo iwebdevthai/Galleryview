@@ -1,0 +1,428 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Galleryview by bhubbard</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Galleryview</h1>
+        <p>jQuery plugin for creating photo galleries. This fork makes it possible to use the GalleryView in a responsive webpage.</p>
+
+        <p class="view"><a href="https://github.com/bhubbard/GalleryView">View the Project on GitHub <small>bhubbard/GalleryView</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/bhubbard/GalleryView/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/bhubbard/GalleryView/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/bhubbard/GalleryView">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="galleryview" class="anchor" href="#galleryview"><span class="octicon octicon-link"></span></a>GalleryView</h1>
+
+<p>Galleryview is a photo gallery plugin for jQuery. It offers several features such as a filmstrip, and now support to be responsive. You can find the latest version at <a href="https://github.com/bhubbard/GalleryView">https://github.com/bhubbard/GalleryView</a></p>
+
+<p>For more information about the <em>responsive</em> GalleryView, you can visit <a href="http://jeroenp.awardspace.com/?page=blog:responsivegalleryview#content">http://jeroenp.awardspace.com/?page=blog:responsivegalleryview#content</a></p>
+
+<h2>
+<a name="contributors" class="anchor" href="#contributors"><span class="octicon octicon-link"></span></a>Contributors</h2>
+
+<ul>
+<li>Jack Anderson (<a href="https://github.com/jackwanders" class="user-mention">@jackwanders</a>)</li>
+<li>Jeroen (<a href="https://github.com/jeroenpx" class="user-mention">@jeroenpx</a>)</li>
+</ul><h2>
+<a name="frequently-asked-questions" class="anchor" href="#frequently-asked-questions"><span class="octicon octicon-link"></span></a>Frequently Asked Questions</h2>
+
+<p>This section will be updated soon.</p>
+
+<hr><h1>
+<a name="getting-started" class="anchor" href="#getting-started"><span class="octicon octicon-link"></span></a>Getting Started</h1>
+
+<ol>
+<li><p>Place galleryview-x.x folder somewhere in your website directory structure (you can rename this folder if desired)</p></li>
+<li><p>Include script tags for the desired version of the script (uncompressed, packed) and for the included jQuery Timers and Easing plugin files</p></li>
+<li><p>Include a reference to the jquery.galleryview-x.x.css stylesheet in your document</p></li>
+<li><p>Create an unordered list in your HTML with the content you wish to be displayed in your gallery (see below for more information on markup options</p></li>
+<li><p>Add class "galleryView" to the unordered list to make it invisible at firt (in order to prevent a flash of unstyled content).</p></li>
+<li>
+<p>Call the GalleryView plugin with the function call below:</p>
+
+<div class="highlight highlight-js"><pre><span class="nx">jQuery</span><span class="p">(</span><span class="s1">'#id_of_list'</span><span class="p">).</span><span class="nx">galleryView</span><span class="p">()</span>
+</pre></div>
+
+<p>To override default option values, include them in object literal format in the call to the plugin, like so:</p>
+
+<div class="highlight highlight-js"><pre><span class="nx">jQuery</span><span class="p">(</span><span class="s1">'#id_of_list'</span><span class="p">).</span><span class="nx">galleryView</span><span class="p">({</span>
+    <span class="nx">panel_width</span><span class="o">:</span> <span class="mi">800</span><span class="p">,</span>
+    <span class="nx">panel_height</span><span class="o">:</span> <span class="mi">600</span><span class="p">,</span>
+    <span class="nx">frame_width</span><span class="o">:</span> <span class="mi">120</span><span class="p">,</span>
+    <span class="nx">frame_height</span><span class="o">:</span> <span class="mi">90</span>
+<span class="p">});</span>
+</pre></div>
+
+<p>Refer to the uncompressed javascript to see a full list of options, their effects on the plugin and their default values.</p>
+</li>
+</ol><h3>
+<a name="html-markup-requirements" class="anchor" href="#html-markup-requirements"><span class="octicon octicon-link"></span></a>HTML MARKUP REQUIREMENTS</h3>
+
+<p>Below, I will show you the markup required to produce various types of galleries. After the first example, 
+I will exclude the UL wrapper and only show the HTML necessary for a single panel and/or frame.</p>
+
+<ol>
+<li>
+<p>Basic slideshow (no added features)</p>
+
+<div class="highlight highlight-html"><pre><span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">"gallery"</span> <span class="na">class=</span><span class="s">"galleryView"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;img</span> <span class="na">src=</span><span class="s">"../gv/path/to/image1.jpg"</span> <span class="na">alt=</span><span class="s">"image1"</span> <span class="nt">/&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;img</span> <span class="na">src=</span><span class="s">"../gv/path/to/image2.jpg"</span> <span class="na">alt=</span><span class="s">"image2"</span> <span class="nt">/&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;img</span> <span class="na">src=</span><span class="s">"../gv/path/to/image3.jpg"</span> <span class="na">alt=</span><span class="s">"image3"</span> <span class="nt">/&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;img</span> <span class="na">src=</span><span class="s">"../gv/path/to/image4.jpg"</span> <span class="na">alt=</span><span class="s">"image4"</span> <span class="nt">/&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</pre></div>
+
+<p>This is the simplest gallery one can have. By default, the filmstrip will appear below the panels. The number of frames visible will be determined by the size of the panels. If there is enough space in the gallery to fit all the filmstrip frames, the filmstrip will be centered within the gallery. If there are too many frames, the additional frames will be hidden from view initially, appearing as the filmstrip slides to the left with each transition. Panel and frame dimensions are set via plugin options, as is the location of the filmstrip. It can be set to appear below, above, or to either side of the panels.</p>
+</li>
+<li>
+<p>Slideshow with custom thumbnails</p>
+
+<div class="highlight highlight-html"><pre><span class="nt">&lt;li&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"../gv/path/to/image.jpg"</span> <span class="na">data-frame=</span><span class="s">"../gv/path/to/thumb.jpg"</span> <span class="na">alt=</span><span class="s">"image"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/li&gt;</span>
+</pre></div>
+
+<p>By adding a data-frame attribute with a relative or absolute path to a separate image, GalleryView will use it to populate the thumbnail. This can be helpful when using large panel images and small thumbnails to avoid degradation due to scaling.</p>
+</li>
+<li>
+<p>Slideshow with panel overlays</p>
+
+<div class="highlight highlight-html"><pre><span class="nt">&lt;li&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"../gv/path/to/image.jpg"</span> <span class="na">alt=</span><span class="s">"image"</span> <span class="na">title=</span><span class="s">"Pretty Picture"</span> <span class="na">data-description=</span><span class="s">"Some more information about the photo"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/li&gt;</span>
+</pre></div>
+
+<p>For this gallery, the contents of the title and data-description attributes will display on top of the panel image, its position determined by the 'overlay_position' option. The color of the overlays are  set in the included CSS file.</p>
+</li>
+<li>
+<p>Slideshow with images delayed loading</p>
+
+<div class="highlight highlight-html"><pre><span class="nt">&lt;li&gt;&lt;img</span> <span class="na">data-original=</span><span class="s">"../gv/path/to/image1.jpg"</span> <span class="na">src=</span><span class="s">"../css/grey.gif"</span> <span class="na">alt=</span><span class="s">"image1"</span> <span class="nt">/&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;li&gt;&lt;img</span> <span class="na">data-original=</span><span class="s">"../gv/path/to/image2.jpg"</span> <span class="na">src=</span><span class="s">"../css/grey.gif"</span> <span class="na">alt=</span><span class="s">"image2"</span> <span class="nt">/&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;li&gt;&lt;img</span> <span class="na">data-original=</span><span class="s">"../gv/path/to/image3.jpg"</span> <span class="na">src=</span><span class="s">"../css/grey.gif"</span> <span class="na">alt=</span><span class="s">"image3"</span> <span class="nt">/&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;li&gt;&lt;img</span> <span class="na">data-original=</span><span class="s">"../gv/path/to/image4.jpg"</span> <span class="na">src=</span><span class="s">"../css/grey.gif"</span> <span class="na">alt=</span><span class="s">"image4"</span> <span class="nt">/&gt;&lt;/li&gt;</span>
+</pre></div>
+
+<p>Put placeholder image into src attribute and store real image url in data-original attribute. The browser won't load the real images until the GalleryView is initialized (that is, when <code>$('#id_of_list').galleryView()</code> is called). This feature is inspired by the <a href="https://github.com/tuupola/jquery_lazyload">Lazy Load Plugin for jQuery</a> by <a href="http://www.appelsiini.net/projects/lazyload">Mika Tuupola</a>.</p>
+</li>
+</ol><h3>
+<a name="creatingusing-custom-navigation-themes" class="anchor" href="#creatingusing-custom-navigation-themes"><span class="octicon octicon-link"></span></a>CREATING/USING CUSTOM NAVIGATION THEMES</h3>
+
+<p>GalleryView comes with two themes by default:</p>
+
+<ul>
+<li>dark</li>
+<li>light</li>
+</ul><p>The dark themes contain dark navigation buttons and are best used in galleries with light backgrounds. The light themes contain light colored images and are best for galleries with dark backgrounds. Both themes also contain oversized panel navigation buttons to demonstrate GalleryView's ability to use any kind of navigation images you may want to use.</p>
+
+<p>To create your own navigation theme, first create the following images:</p>
+
+<ul>
+<li>next.png</li>
+<li>prev.png</li>
+<li>play.png</li>
+<li>pause.png</li>
+<li>panel-nav-next.png</li>
+<li>panel-nav-prev.png</li>
+</ul><p>The images can be of any file type. Then, update the galleryView CSS file with the paths to your new navigation images.</p>
+
+<hr><h2>
+<a name="upgrade-notice" class="anchor" href="#upgrade-notice"><span class="octicon octicon-link"></span></a>Upgrade Notice</h2>
+
+<p>Currently there are no upgrade notices.</p>
+
+<h2>
+<a name="changelog" class="anchor" href="#changelog"><span class="octicon octicon-link"></span></a>Changelog</h2>
+
+<h4>
+<a name="version-310---2014-07-05" class="anchor" href="#version-310---2014-07-05"><span class="octicon octicon-link"></span></a>Version 3.1.0 - 2014-07-05</h4>
+
+<ul>
+<li>Offering Minified Versions of Galleryview CSS &amp; JS</li>
+<li>Re-Organizing Files in the Repo</li>
+<li>Responsive Code Provided by Jerome</li>
+<li>Separated Themes Into Separate Sass Files &amp; Image Folders</li>
+</ul><h4>
+<a name="version-30-beta-3---2011-03-15" class="anchor" href="#version-30-beta-3---2011-03-15"><span class="octicon octicon-link"></span></a>Version 3.0 beta 3 - 2011-03-15</h4>
+
+<ul>
+<li>Anchor tags in source markup now transfer to both the filmstrip and the panel</li>
+<li>Fixed bug preventing filmstrip from stretching full width of gallery when 'show_filmstrip_nav' option was set to false</li>
+<li>Enabled ability to show all frames and filmstrip navigation together</li>
+<li>Added new option to control display of panel overlays</li>
+<li>Classes applied to the source </li>
+<li> tags will be copied to both the appropriate filmstrip frame and panel</li>
+<li>Classes applied to the source <ul> tag will be copied to the resulting gallery <div> 
+<li>New options:
+
+<ul>
+<li>show_overlays</li>
+<li>BOOLEAN: flag to indicate whether to show or hide panel overlays</li>
+</ul>
+</li>
+
+
+<h4>
+<a name="version-30-beta-2---2011-03-14" class="anchor" href="#version-30-beta-2---2011-03-14"><span class="octicon octicon-link"></span></a>Version 3.0 beta 2 - 2011-03-14</h4>
+
+<ul>
+<li>Class names altered to be less generic, avoid interference from other CSS</li>
+<li>Removed fixed caption size, added CSS support for multi-line captions</li>
+<li>Added 'filter:inherit' CSS rule to panels to combat IE8 which prevents fade animations from working</li>
+<li>Changed navigation images to <div> tags with images as backgrounds. Navigation images can now be defined in CSS
+<li>Removed options:
+
+<ul>
+<li>nav_theme - no longer necessary as navigation images are defined in CSS</li>
+<li>theme_format - no longer necessary as navigation images are defined in CSS<br>
+</li>
+</ul>
+</li>
+
+
+<h4>
+<a name="version-30-beta-1---2011-03-10" class="anchor" href="#version-30-beta-1---2011-03-10"><span class="octicon octicon-link"></span></a>Version 3.0 beta 1 - 2011-03-10</h4>
+
+<ul>
+<li>Setting transition interval to 0 prevents automated transitions instead of causing instant transitions</li>
+<li>Capped transition speed at value of transition interval to prevent overlapping animations</li>
+<li>Changed default panel_scale value from 'nocrop' to 'crop'</li>
+<li>Capped pointer size to 1/2 of frame width to prevent pointer from extending past frame edge</li>
+<li>Fixed bug that caused misplaced panels when not displaying filmstrip</li>
+<li>Fixed bug when calling plugin after window load</li>
+<li>Added ability to slide panels as an alternative to fading</li>
+<li>Various bug fixes regarding incorrect element placement after customizing CSS</li>
+<li>Improved gallery loading behavior (users no longer see gallery animating to initial panel/frame)</li>
+<li>Updated navigation themes to PNG format and included PNG support for custom navigation themes</li>
+<li>Made both panel and filmstrip navigation optional, regardless of panel and filmstrip visibility</li>
+<li>Panel navigation overlay images are now set to be opaque due to an IE7 PNG transparency bug. You can create your own transparent overlay images if you wish</li>
+<li>New options:
+
+<ul>
+<li>filmstrip_style
+
+<ul>
+<li>STRING: Sets behavior of filmstrip (scroll,show all)
+
+<ul>
+<li>'show all' forces 'show_navigation' to false and 'pointer_size' to zero (if there are 
+multiple rows of frames)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>show_panel_nav
+
+<ul>
+<li>BOOLEAN: flag to indicate whether to display panel-based navigation buttons</li>
+</ul>
+</li>
+<li>show_filmstrip_nav
+
+<ul>
+<li>BOOLEAN: flag to indicate whether to display filmstrip-based navigation buttons</li>
+</ul>
+</li>
+<li>animate_pointer
+
+<ul>
+<li>BOOLEAN: flag to indicate whether filmstrip pointer animates between frames or jumps instantly</li>
+</ul>
+</li>
+<li>panel_animation
+
+<ul>
+<li>STRING: type of transition panels should undergo (fade,crossfade,slide,zoom,none)</li>
+</ul>
+</li>
+<li>theme_format
+
+<ul>
+<li>STRING: extension type of images in the theme indicated by the 'nav_theme' option</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Removed options:
+
+<ul>
+<li>fade_panels
+
+<ul>
+<li>no longer necessary as setting panel_animation to 'none' serves the same purpose</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4>
+<a name="version-211---2010-03-15" class="anchor" href="#version-211---2010-03-15"><span class="octicon octicon-link"></span></a>Version 2.1.1 - 2010-03-15</h4>
+
+<ul>
+<li>Small bug fix dealing with frame opacity</li>
+</ul>
+<h4>
+<a name="version-21---20010-03-14" class="anchor" href="#version-21---20010-03-14"><span class="octicon octicon-link"></span></a>Version 2.1 - 20010-03-14</h4>
+
+<ul>
+<li>Made minor updates to ensure compatibility with jQuery 1.4.x</li>
+<li>Heavily commented javascript code</li>
+<li>Included README.txt with instructions on using plugin</li>
+<li>Updated jQuery Timers plugin to version 1.3</li>
+</ul>
+<h4>
+<a name="version-20---2009-05-05" class="anchor" href="#version-20---2009-05-05"><span class="octicon octicon-link"></span></a>Version 2.0 - 2009-05-05</h4>
+
+<ul>
+<li>Revised required HTML markup for GalleryView</li>
+<li>Filmstrip frames are generated automatically (no need for two sets of images)</li>
+<li>Moved majority of aesthetic styling to external CSS</li>
+<li>Default aesthetics for gallery updated</li>
+<li>Set GalleryView to wait until images finish loading before building itself</li>
+<li>Added 'current' class to current filmstrip frame for user customization</li>
+<li>Allowed for more user-defined styling in panels and filmstrip frames</li>
+<li>Filmstrip can now be placed on left and right side of gallery, in addition to top and bottom</li>
+<li>Panel images can now be scaled to fit within panel or zoomed &amp; cropped to fill panel</li>
+<li>Filmstrip images can now be scaled to fit within frame or zoomed &amp; cropped to fill frame</li>
+<li>Panel overlay backgrounds are now only added to those panels with overlays</li>
+<li>'pause_on_hover' option now pauses when mouse hovers over filmstrip as well as panel</li>
+<li>Added option to start gallery on any frame</li>
+<li>Current frame pointer is now built with CSS and its size can be customized easily</li>
+<li>Increased size of hitbox on panel-navigation buttons</li>
+<li>Updated options:
+
+<ul>
+<li>filmstrip_position
+
+<ul>
+<li>new allowable values : 'top', 'right', 'bottom', 'left'<br>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Removed options:
+
+<ul>
+<li>overlay_height</li>
+<li>overlay_font_size</li>
+<li>overlay_color</li>
+<li>background_color</li>
+<li>overlay_text_color</li>
+<li>caption_text_color</li>
+<li>border</li>
+</ul>
+</li>
+<li>New options:
+
+<ul>
+<li>show_panels (boolean)</li>
+<li>show_filmstrip (boolean)</li>
+<li>start_frame (integer)</li>
+<li>pointer_size (integer)</li>
+<li>panel_scale
+
+<ul>
+<li>allowable values : 'crop', 'nocrop'</li>
+</ul>
+</li>
+<li>frame_scale
+
+<ul>
+<li>allowable values : 'crop', 'nocrop'</li>
+</ul>
+</li>
+<li>frame_gap (integer)<br>
+</li>
+</ul>
+</li>
+</ul>
+<h4>
+<a name="version-11---2009-04-05" class="anchor" href="#version-11---2009-04-05"><span class="octicon octicon-link"></span></a>Version 1.1 - 2009-04-05</h4>
+
+<ul>
+<li>Added feature allowing filmstrip w/o panels</li>
+<li>Added feature allowing panels w/o filmstrip</li>
+<li>Added feature allowing filmstrip placement above or below panels</li>
+<li>Added new graphics for panel navigation</li>
+<li>Anchored navigation buttons to edges of filmstrip, rather than gallery boundaries</li>
+<li>New options:
+
+<ul>
+<li>filmstrip_position
+
+<ul>
+<li>allowable values : 'top', 'bottom'</li>
+</ul>
+</li>
+<li>overlay_position
+
+<ul>
+<li>allowable values : 'top', 'bottom'</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4>
+<a name="version-101---2009-03-30" class="anchor" href="#version-101---2009-03-30"><span class="octicon octicon-link"></span></a>Version 1.0.1 - 2009-03-30</h4>
+
+<ul>
+<li>Fixed bug allowing blank frames to display in filmstrip</li>
+<li>Changed pointer graphic from GIF to PNG to allow for greater customization</li>
+<li>Added 'overflow: hidden' to panels to prevent oversized content from breaking gallery</li>
+<li>Disabled frame clicking during filmstrip animation</li>
+<li>Changed pointer border from 4px to 2px</li>
+</ul>
+<h4>
+<a name="version-10---2009-03-29" class="anchor" href="#version-10---2009-03-29"><span class="octicon octicon-link"></span></a>Version 1.0 - 2009-03-29</h4>
+
+<ul>
+<li>Initial Release</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</ul>
+</li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/bhubbard">bhubbard</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-3139470-5");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
