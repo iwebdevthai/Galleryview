@@ -1,8 +1,6 @@
 
 # GalleryView
 
-
-## Description
 Galleryview is a photo gallery plugin for jQuery. It offers several features such as a filmstrip, and now support to be responsive. You can find the latest version at https://github.com/bhubbard/GalleryView
 
 For more information about the *responsive* GalleryView, you can visit http://jeroenp.awardspace.com/?page=blog:responsivegalleryview#content
@@ -32,8 +30,8 @@ Currently there are no upgrade notices.
 * Classes applied to the source <li> tags will be copied to both the appropriate filmstrip frame and panel
 * Classes applied to the source <ul> tag will be copied to the resulting gallery <div> 
 * New options:
-	* show_overlays
-		* BOOLEAN: flag to indicate whether to show or hide panel overlays
+	- show_overlays
+		- BOOLEAN: flag to indicate whether to show or hide panel overlays
 
 #### Version 3.0 beta 2 - 2011-03-14
 * Class names altered to be less generic, avoid interference from other CSS
@@ -147,10 +145,9 @@ Currently there are no upgrade notices.
 #### Version 1.0 - 2009-03-29
 * Initial Release
 
+---
 
-
-## INSTRUCTIONS FOR USE
----------------------------------
+# Getting Started
 1. Place galleryview-x.x folder somewhere in your website directory structure (you can rename this folder if desired)
 
 2. Include script tags for the desired version of the script (uncompressed, packed) and for the included jQuery Timers and Easing plugin files
@@ -182,7 +179,7 @@ Currently there are no upgrade notices.
 	
 
 
-## HTML MARKUP REQUIREMENTS
+### HTML MARKUP REQUIREMENTS
 Below, I will show you the markup required to produce various types of galleries. After the first example, 
 I will exclude the UL wrapper and only show the HTML necessary for a single panel and/or frame.
 
@@ -227,7 +224,7 @@ I will exclude the UL wrapper and only show the HTML necessary for a single pane
 	
 	Put placeholder image into src attribute and store real image url in data-original attribute. The browser won't load the real images until the GalleryView is initialized (that is, when <code>$('#id_of_list').galleryView()</code> is called). This feature is inspired by the [Lazy Load Plugin for jQuery](https://github.com/tuupola/jquery_lazyload) by [Mika Tuupola](http://www.appelsiini.net/projects/lazyload).
 	
-## CREATING/USING CUSTOM NAVIGATION THEMES
+### CREATING/USING CUSTOM NAVIGATION THEMES
 GalleryView comes with two themes by default:
 * dark
 * light
