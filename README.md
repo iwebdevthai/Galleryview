@@ -1,14 +1,15 @@
 
 # GalleryView
----
 
 
 ## Description
 Galleryview is a photo gallery plugin for jQuery. It offers several features such as a filmstrip, and now support to be responsive. You can find the latest version at https://github.com/bhubbard/GalleryView
 
+For more information about the *responsive* GalleryView, you can visit http://jeroenp.awardspace.com/?page=blog:responsivegalleryview#content
+
 ## Contributors
-* Jack Anderson (jackwanders)
-* Jeroen (jeroenpx)
+* Jack Anderson (@jackwanders)
+* Jeroen (@jeroenpx)
 
 ## Frequently Asked Questions
 This section will be updated soon.
@@ -148,22 +149,7 @@ Currently there are no upgrade notices.
 
 
 
-
-
-===
-
-
-For more information about the *responsive* GalleryView, you can visit http://jeroenp.awardspace.com/?page=blog:responsivegalleryview#content .
-
-
-
-## Readme of GalleryView
-
-
-GalleryView - jQuery Photo Gallery Plugin
-Author: Jack Anderson
-
-INSTRUCTIONS FOR USE
+## INSTRUCTIONS FOR USE
 ---------------------------------
 1. Place galleryview-x.x folder somewhere in your website directory structure (you can rename this folder if desired)
 
@@ -178,13 +164,13 @@ INSTRUCTIONS FOR USE
 6. Call the GalleryView plugin with the function call below:
 
 	```js
-	$('#id_of_list').galleryView()
+	jQuery('#id_of_list').galleryView()
 	```
 
 	To override default option values, include them in object literal format in the call to the plugin, like so:
 
 	```js
-	$('#id_of_list').galleryView({
+	jQuery('#id_of_list').galleryView({
 		panel_width: 800,
 		panel_height: 600,
 		frame_width: 120,
@@ -196,8 +182,7 @@ INSTRUCTIONS FOR USE
 	
 
 
-HTML MARKUP REQUIREMENTS
----------------------------------
+## HTML MARKUP REQUIREMENTS
 Below, I will show you the markup required to produce various types of galleries. After the first example, 
 I will exclude the UL wrapper and only show the HTML necessary for a single panel and/or frame.
 
@@ -242,23 +227,20 @@ I will exclude the UL wrapper and only show the HTML necessary for a single pane
 	
 	Put placeholder image into src attribute and store real image url in data-original attribute. The browser won't load the real images until the GalleryView is initialized (that is, when <code>$('#id_of_list').galleryView()</code> is called). This feature is inspired by the [Lazy Load Plugin for jQuery](https://github.com/tuupola/jquery_lazyload) by [Mika Tuupola](http://www.appelsiini.net/projects/lazyload).
 	
-CREATING/USING CUSTOM NAVIGATION THEMES
----------------------------------
+## CREATING/USING CUSTOM NAVIGATION THEMES
 GalleryView comes with two themes by default:
-- dark
-- light
+* dark
+* light
 
 The dark themes contain dark navigation buttons and are best used in galleries with light backgrounds. The light themes contain light colored images and are best for galleries with dark backgrounds. Both themes also contain oversized panel navigation buttons to demonstrate GalleryView's ability to use any kind of navigation images you may want to use.
 
 To create your own navigation theme, first create the following images:
-- next.png
-- prev.png
-- play.png
-- pause.png
-- panel-nav-next.png
-- panel-nav-prev.png
+* next.png
+* prev.png
+* play.png
+* pause.png
+* panel-nav-next.png
+* panel-nav-prev.png
 
 The images can be of any file type. Then, update the galleryView CSS file with the paths to your new navigation images.
 
-
-That should hopefully be enough to get you started on the right track. Feel free to experiment and find me on twitter (@jackwanders) if you have any questions or comments. Enjoy!
