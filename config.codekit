@@ -40,7 +40,7 @@
 		"outputAbbreviatedPath": "\/demos\/images\/slide10.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/demos\/images\/slide11.jpg": {
 		"fileType": 16384,
@@ -51,7 +51,7 @@
 		"outputAbbreviatedPath": "\/demos\/images\/slide11.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/demos\/images\/slide12.jpg": {
 		"fileType": 16384,
@@ -62,7 +62,7 @@
 		"outputAbbreviatedPath": "\/demos\/images\/slide12.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/demos\/images\/slide13.jpg": {
 		"fileType": 16384,
@@ -73,7 +73,7 @@
 		"outputAbbreviatedPath": "\/demos\/images\/slide13.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/demos\/images\/slide2.jpg": {
 		"fileType": 16384,
@@ -95,7 +95,7 @@
 		"outputAbbreviatedPath": "\/demos\/images\/slide3.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/demos\/images\/slide4.jpg": {
 		"fileType": 16384,
@@ -106,7 +106,7 @@
 		"outputAbbreviatedPath": "\/demos\/images\/slide4.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/demos\/images\/slide5.jpg": {
 		"fileType": 16384,
@@ -117,7 +117,7 @@
 		"outputAbbreviatedPath": "\/demos\/images\/slide5.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/demos\/images\/slide6.jpg": {
 		"fileType": 16384,
@@ -128,7 +128,7 @@
 		"outputAbbreviatedPath": "\/demos\/images\/slide6.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/demos\/images\/slide7.jpg": {
 		"fileType": 16384,
@@ -139,7 +139,7 @@
 		"outputAbbreviatedPath": "\/demos\/images\/slide7.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/demos\/images\/slide8.jpg": {
 		"fileType": 16384,
@@ -150,7 +150,7 @@
 		"outputAbbreviatedPath": "\/demos\/images\/slide8.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/demos\/images\/slide9.jpg": {
 		"fileType": 16384,
@@ -161,7 +161,7 @@
 		"outputAbbreviatedPath": "\/demos\/images\/slide9.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/demos\/responsive_gallery_demo.html": {
 		"fileType": 8192,
@@ -217,7 +217,7 @@
 		"outputAbbreviatedPath": "\/dist\/images\/themes\/dark\/galleryview-theme-dark-sprite.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/dist\/images\/themes\/dark\/next.png": {
 		"fileType": 32768,
@@ -338,7 +338,7 @@
 		"outputAbbreviatedPath": "\/dist\/images\/themes\/light\/galleryview-theme-light-sprite.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/dist\/images\/themes\/light\/info.png": {
 		"fileType": 32768,
