@@ -1,0 +1,216 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Galleryview | List of All Available Options</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+  
+   <h1><a name="galleryview" class="anchor" href="#galleryview"><span class="octicon octicon-link"></span></a>Galleryview Options</h1>
+
+   <p>The following table shows you all of the GalleryView Options:</p>
+
+<hr />
+
+ <table class="table table-striped">
+<thead>
+            	<tr>
+                	<th>OPTION</th>
+                    <th>TYPE</th>
+                    <th width="150">DEFAULT VALUE</th>
+                    <th>DESCRIPTION</th>
+                </tr>
+            </thead>
+            <tbody>
+            	<tr>
+                	<td>transition_speed</td>
+                    <td>int</td>
+                    <td>1000</td>
+                    <td>the duration of photo transition animations in milliseconds.</td>
+                </tr>
+            	<tr>
+                	<td>transition_interval</td>
+                    <td>int</td>
+                    <td>4000</td>
+                    <td>the delay between automated slideshow transitions in milliseconds.</td>
+                </tr>
+            	<tr>
+                	<td>easing</td>
+                    <td>string</td>
+                    <td>'swing'</td>
+                    <td>the easing method used in photo and thumbnail animations. any custom easing method may be used.</td>
+                </tr>
+            	<tr>
+                	<td>show_panels</td>
+                    <td>boolean</td>
+                    <td><strong>true</strong></td>
+                    <td>flag to toggle display of main photo panel. set to <strong>false</strong> to create a carousel-style gallery. <em>(not fully implemented)</em></td>
+                </tr>
+            	<tr>
+                	<td>show_panel_nav</td>
+                    <td>boolean</td>
+                    <td><strong>true</strong></td>
+                    <td>flag to toggle display of <em>next</em> and <em>previous</em> buttons in the gallery panel.</td>
+                </tr>
+            	<tr>
+                	<td>enable_overlays</td>
+                    <td>boolean</td>
+                    <td><strong>false</strong></td>
+                    <td>flag to toggle display of informational image overlays.</td>
+                </tr>
+            	<tr>
+                	<td>panel_width</td>
+                    <td>int</td>
+                    <td>800</td>
+                    <td>width of image panel in pixels.</td>
+                </tr>
+            	<tr>
+                	<td>panel_height</td>
+                    <td>int</td>
+                    <td>400</td>
+                    <td>height of image panel in pixels.</td>
+                </tr>
+            	<tr>
+                	<td>panel_animation</td>
+                    <td>string</td>
+                    <td>'fade'</td>
+                    <td>the animation method used for panel image transitions. Options are 'fade', 'crossfade', 'slide'</td>
+                </tr>
+            	<tr>
+                	<td>panel_scale</td>
+                    <td>string</td>
+                    <td>'crop'</td>
+                    <td>the scaling method for panel images. Options are 'crop', 'fit'.</td>
+                </tr>
+            	<tr>
+                	<td>overlay_position</td>
+                    <td>string</td>
+                    <td>'bottom'</td>
+                    <td>the positioning of informational panel overlays. Options are 'bottom', 'top'</td>
+                </tr>
+                <tr>
+                	<td>pan_images</td>
+                    <td>boolean</td>
+                    <td><strong>false</strong></td>
+                    <td>flag to toggle drag-based panning of oversized panel images.</td>
+                </tr>
+                <tr>
+                	<td>pan_style</td>
+                    <td>string</td>
+                    <td>'drag'</td>
+                    <td>panning method used. 'drag' = user clicks and drags image to pan, 'track' = image automatically pans based on mouse position</td>
+                </tr>
+                <tr>
+                	<td>start_frame</td>
+                    <td>int</td>
+                    <td>1</td>
+                    <td>index indicating which image to display when gallery loads</td>
+                </tr>
+                <tr>
+                	<td>show_filmstrip</td>
+                    <td>boolean</td>
+                    <td><strong>true</strong></td>
+                    <td>flag to toggle display of navigation filmstrip.</td>
+                </tr>
+                <tr>
+                	<td>show_filmstrip_nav</td>
+                    <td>boolean</td>
+                    <td><strong>true</strong></td>
+                    <td>flag to toggle display of filmstrip-based navigation buttons.</td>
+                </tr>
+            	<tr>
+                	<td>enable_slideshow</td>
+                    <td>boolean</td>
+                    <td><strong>true</strong></td>
+                    <td>flag to toggle play/pause button and ability to start/stop slideshow</td>
+                </tr>
+            	<tr>
+                	<td>autoplay</td>
+                    <td>boolean</td>
+                    <td><strong>false</strong></td>
+                    <td>flag to automatically start slideshow when gallery loads</td>
+                </tr>
+                <tr>
+                	<td>filmstrip_position</td>
+                    <td>string</td>
+                    <td>'bottom'</td>
+                    <td>location of filmstrip in relation to panel. Options are 'top', 'left', 'bottom', 'right'.</td>
+                </tr>
+            	<tr>
+                	<td>frame_width</td>
+                    <td>int</td>
+                    <td>70</td>
+                    <td>width of filmstrip frames in pixels.</td>
+                </tr>
+            	<tr>
+                	<td>frame_height</td>
+                    <td>int</td>
+                    <td>40</td>
+                    <td>height of filmstrip frames in pixels.</td>
+                </tr>
+            	<tr>
+                	<td>frame_opacity</td>
+                    <td>float</td>
+                    <td>0.4</td>
+                    <td>the default opacity of filmstrip frames (range 0.0 - 1.0)</td>
+                </tr>
+            	<tr>
+                	<td>frame_scale</td>
+                    <td>string</td>
+                    <td>'crop'</td>
+                    <td>the scaling method for frame images. Options are 'crop', 'fit'.</td>
+                </tr>
+            	<tr>
+                	<td>frame_gap</td>
+                    <td>int</td>
+                    <td>5</td>
+                    <td>distance between frames in pixels.<br></td>
+                </tr>
+            	<tr>
+                	<td>show_captions</td>
+                    <td>boolean</td>
+                    <td><strong>false</strong></td>
+                    <td>flag to toggle display of frame captions (populated by image's <code>title</code> attribute).</td>
+                </tr>
+            	<tr>
+                	<td>show_infobar</td>
+                    <td>boolean</td>
+                    <td><strong>true</strong></td>
+                    <td>flag to toggle display of image counter bar.</td>
+                </tr>
+            	<tr>
+                	<td>infobar_opacity</td>
+                    <td>float</td>
+                    <td>1.0</td>
+                    <td>the default opacity of infobar (range 0.0 - 1.0)</td>
+                </tr>
+            </tbody>
+  </table>
+
+  <br />
+  <div style="text-align:center"> <a href="index.html" class="button">Return to Main Page</a> </div>
+
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-3139470-5");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>

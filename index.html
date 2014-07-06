@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Galleryview by bhubbard</title>
+    <title>Galleryview - A jQuery plugin for a beautiful photo gallery</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
@@ -15,10 +15,16 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Galleryview</h1>
+        <h1>GalleryView</h1>
         <p>jQuery plugin for creating photo galleries. This fork makes it possible to use the GalleryView in a responsive webpage.</p>
 
-        <p class="view"><a href="https://github.com/bhubbard/GalleryView">View the Project on GitHub <small>bhubbard/GalleryView</small></a></p>
+        <p class="view">
+	        <ul>
+				<li><a href="options.html">View All <strong>Options</strong></a></li>
+				<li><a href="responsive.html">Guide for <strong>Responsive</strong></a></li>
+				<li><a href="http://nextgen-galleryview.com">Plugin for <strong>WordPress</strong></a></li>
+	        </ul>
+        </p>
 
 
         <ul>
@@ -124,7 +130,10 @@ I will exclude the UL wrapper and only show the HTML necessary for a single pane
 
 <p>Put placeholder image into src attribute and store real image url in data-original attribute. The browser won't load the real images until the GalleryView is initialized (that is, when <code>$('#id_of_list').galleryView()</code> is called). This feature is inspired by the <a href="https://github.com/tuupola/jquery_lazyload">Lazy Load Plugin for jQuery</a> by <a href="http://www.appelsiini.net/projects/lazyload">Mika Tuupola</a>.</p>
 </li>
-</ol><h3>
+</ol>
+
+
+<h3>
 <a name="creatingusing-custom-navigation-themes" class="anchor" href="#creatingusing-custom-navigation-themes"><span class="octicon octicon-link"></span></a>CREATING/USING CUSTOM NAVIGATION THEMES</h3>
 
 <p>GalleryView comes with two themes by default:</p>
@@ -340,8 +349,8 @@ multiple rows of frames)</li>
 <li>start_frame (integer)</li>
 <li>pointer_size (integer)</li>
 <li>panel_scale
-
 <ul>
+<ul>	
 <li>allowable values : 'crop', 'nocrop'</li>
 </ul>
 </li>
@@ -367,12 +376,13 @@ multiple rows of frames)</li>
 <li>Anchored navigation buttons to edges of filmstrip, rather than gallery boundaries</li>
 <li>New options:
 
-<ul>
-<li>filmstrip_position
-
-<ul>
-<li>allowable values : 'top', 'bottom'</li>
+	<ul>
+		<li>filmstrip_position
+		<ul><li>allowable values : 'top', 'bottom'</li>
 </ul>
+		</li>
+	<ul>
+
 </li>
 <li>overlay_position
 
@@ -407,10 +417,7 @@ multiple rows of frames)</li>
 </li>
 </ul>
       </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/bhubbard">bhubbard</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+
     </div>
     <script src="javascripts/scale.fix.js"></script>
               <script type="text/javascript">

@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Galleryview | Setup Responsive Options</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+  
+   <h1><a name="galleryview" class="anchor" href="#galleryview"><span class="octicon octicon-link"></span></a>Galleryview Responsive Options</h1>
+
+<hr />
+
+
+
+
+<h3>Responsive Template</h3>
+
+<p>For people who just want a responsive GalleryView and don't care that the filmstrip is at the bottom and how exactly it scales, you can download this template.</p>
+
+<p>However, if you do want to change some settings or want a different scaling, you should continue reading! Changing settings means you will need to write a small piece of javascript to tell the GalleryView how the scaling works.</p>
+
+
+<h4>How to use the responsive version?</h4>
+
+<p>The responsive version supports all the features of the normal GalleryView. Start by creating a non-responsive version, afterwards we will setup the options to make it responsive. </p>
+
+<ol>
+	<li><strong>Create a non-responsive GalleryView.</strong></li>
+	<li><strong>Decide how you would like the GalleryView to scale.</strong>
+	<p>There are a lot of possible ways to resize a GalleryView. You will need to know how you want it to scale. For example, would you like to let the GalleryView try to fit a div? Or make the height fixed and make only the width dependent on the size of the div? You could also make the height change to fit x images in the filmstrip (when the images in the filmstrip resize).</p>
+
+	<p><strong>Thumbnails:</strong> Do the thumbnails stay the same size independent of the size of the GalleryView, resulting in more thumbnails that are shown when there is more place? Or would you like to scale the thumbnails to fit the filmstrip and leave the number of thumbnails shown the same? Another option would be to scale the thumbnails so that they take a certain procent of the width of the GalleryView. (assuming the filmstrip is placed vertically)</p>
+
+	</li>
+	<li><strong>Calculate the following options: (based on browser sizes)</strong>
+		<ul>
+			<li>frame_width</li>
+			 <li>frame_height</li>
+			 <li>panel_width</li>
+			 <li>panel_height</li>
+		</ul>
+	</li>
+</ol>
+
+
+
+<p>When you know how you want the filmstrip to resize, it is time to make it happen. Depending on the choices you made in step 2 you will have a totally different responsive gallery.</p>
+
+<p>Calculate the width and height of the frame and an individual thumbnail.
+What do we need to do?</p>
+
+<p>Every time the browser resizes, we will need to tell the GalleryView the new size of the thumbnails and the frame.</p>
+
+<p>So we need to be able to calculate the things shown in the figure to the right.</p>
+
+<p>How do you do this? An example...</p>
+<img src="images/responsive_padding.png" alt="responsive_padding" width="380" height="250">
+<p>Let us assume the filmstrip is horizontal. We also know the total width of the gallery we want. For example the width of a div.</p>
+
+<p>We want the frame to fit the width of the gallery. Note that we have to take into account the padding as we can see in the picture to the right.</p>
+<img src="images/responsive_whattocalculate.png" alt="responsive_whattocalculate" width="347" height="251">
+<p>So, to calculate the width of the frame, we take the total width of the gallery and subtract the padding two times. (You can set the padding in the GalleryView: parameter "frame_gap". The default value is 5px.)
+	</p>
+
+<p>Depending on your GalleryView, the calculations are different and I will not go into detail. Just some notes:
+- If we want the thumbnails to have a constant width/height, calculating the width/height of the panel is really easy: it is just a constant.
+- If we want something to keep the same aspect ratio we calculate the width first and then multiply it by a certain number (e.g. 0.6) to get the height.
+</p>
+
+<p>The final step: adding the resize calculations to the code</p>
+
+<p>First we need to be able to call methods on the GalleryView. Therefore we need to save the <ul>, the GalleryView was created from.
+To do this you save the <ul> just before the call to <pre><code>.galleryView();</code></pre>
+For example:<pre><code> var $gallery = $('#myGallery');</code></pre>
+</p>
+
+<p>After calling <pre><code>.galleryView()</code></pre> we need to setup the resize code.</p>
+
+<pre><code>
+function resizeTheGallery(){
+    
+    // Implement your own way of resizing here!
+    var new_frame_width = <add calculations from step 3 here>
+    var new_frame_height = <add calculations from step 3 here>
+    var new_panel_width = <add calculations from step 3 here>
+    var new_panel_height = <add calculations from step 3 here>
+    
+    // call the resize method
+    $gallery.resizeGalleryView( new_panel_width, 
+                                new_panel_height, 
+                                new_frame_width, 
+                                new_frame_height);
+}
+    
+    
+//call the resize method and bind to resize event
+$(window).resize(resizeTheGallery);
+resizeTheGallery();
+</code></pre>
+
+<p>The above code defines a method which contains the calculations from step 3 and calls the correct method on the GalleryView when the calculations are done. The lines at the end make sure the code gets called when the window is resized, and in the beginning.</p>
+
+<p><strong>Note:</strong> If you are using a div which the gallery tries to fit, you should also add style="overflow:hidden;" to the div. Otherwise the div will expand to fit the size of the gallery and not the inverse.</p>
+
+<p><a href="http://jeroenp.awardspace.com/?page=blog:responsivegalleryview#content" target="_blank">This guide was originally written by Jeroen</a></p>
+
+
+<hr />
+  <br />
+  <div style="text-align:center"> <a href="index.html" class="button">Return to Main Page</a> </div>
+
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-3139470-5");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
