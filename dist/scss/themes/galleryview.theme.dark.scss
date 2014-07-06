@@ -4,24 +4,39 @@
 	Version: 3.1.0
 	
 -----------------------------------------------------------------------------------*/
+.gv_showOverlay, .gv_navPlay, .gv_navPause, .gv_navNext, .gv_navPrev, .gv_panelNavNext, .gv_panelNavPrev {
+	background: url(../images/themes/dark/galleryview-theme-dark-sprite.png) no-repeat;
+}
 .gv_showOverlay { 
-	background: url(../images/themes/dark/info.png) #222; 
+	background: #222; 
 }
 .gv_navPlay {
-	background: url(../images/themes/dark/play-big.png) top left no-repeat;
+	background-position: -9px -60px ;
+	width: 30px;
+	height: 30px;
 }
 .gv_navPause {
-	background: url(../images/themes/dark/pause-big.png) top left no-repeat;
+	background-position: -60px -60px ;
+	width: 30px;
+	height: 30px;
 }
 .gv_navNext {
-	background: url(../images/themes/dark/next.png) top left no-repeat;
+	background-position: -164px -17px ;
+	width: 20px;
+	height: 20px;
 }
 .gv_navPrev {
-	background: url(../images/themes/dark/prev.png) top right no-repeat;
+	background-position: -116px -16px ;
+	width: 20px;
+	height: 20px;
 }
 .gv_panelNavNext {
-	background: url(../images/themes/dark/panel-next.png) top left no-repeat;
+	background-position: -164px -17px ;
+	width: 20px;
+	height: 20px;
 }
 .gv_panelNavPrev {
-	background: url(../images/themes/dark/panel-prev.png) top right no-repeat;
+	background-position: -116px -16px ;
+	width: 20px;
+	height: 20px;
 }
