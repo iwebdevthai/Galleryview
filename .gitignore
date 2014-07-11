@@ -1,5 +1,8 @@
-DS.Store
-Thumbs.db
-.sass-cache
 
+
+.DS_Store
+Thumbs.db
+
+
+.sass-cache
 .codekit-cache
