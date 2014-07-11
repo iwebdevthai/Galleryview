@@ -1,9 +1,7 @@
 
 # GalleryView
 
-Galleryview is a photo gallery plugin for jQuery. It offers several features such as a filmstrip, and now support to be responsive. You can find the latest version at https://github.com/bhubbard/GalleryView
-
-For more information about the *responsive* GalleryView, you can visit http://jeroenp.awardspace.com/?page=blog:responsivegalleryview#content
+GalleryView is a photo gallery plugin for jQuery. It offers several features such as a filmstrip, and now support to be responsive. You can find the latest version at https://github.com/bhubbard/GalleryView
 
 ## Contributors
 * Jack Anderson (@jackwanders)
@@ -66,7 +64,7 @@ I will exclude the UL wrapper and only show the HTML necessary for a single pane
 2. Slideshow with custom thumbnails
 	```html
 	<li>
-		<img src="../gv/path/to/image.jpg" data-frame="../gv/path/to/thumb.jpg" alt="image" />
+		<img src="../gv/path/to/image.jpg" data-frame="../gv/path/to/thumb.jpg" alt="image" height="" width="" />
 	</li>
 	```
 
@@ -75,7 +73,7 @@ I will exclude the UL wrapper and only show the HTML necessary for a single pane
 3. Slideshow with panel overlays
 	```html
 	<li>
-		<img src="../gv/path/to/image.jpg" alt="image" title="Pretty Picture" data-description="Some more information about the photo" />
+		<img src="../gv/path/to/image.jpg" alt="image" title="Pretty Picture" data-description="Some more information about the photo" height="" width="" />
 	</li>
 	```
 
@@ -83,10 +81,10 @@ I will exclude the UL wrapper and only show the HTML necessary for a single pane
 
 4. Slideshow with images delayed loading
 	```html
-	<li><img data-original="../gv/path/to/image1.jpg" src="../css/grey.gif" alt="image1" /></li>
-	<li><img data-original="../gv/path/to/image2.jpg" src="../css/grey.gif" alt="image2" /></li>
-	<li><img data-original="../gv/path/to/image3.jpg" src="../css/grey.gif" alt="image3" /></li>
-	<li><img data-original="../gv/path/to/image4.jpg" src="../css/grey.gif" alt="image4" /></li>
+	<li><img data-original="../gv/path/to/image1.jpg" src="../css/grey.gif" alt="image1" height="" width="" /></li>
+	<li><img data-original="../gv/path/to/image2.jpg" src="../css/grey.gif" alt="image2" height="" width="" /></li>
+	<li><img data-original="../gv/path/to/image3.jpg" src="../css/grey.gif" alt="image3" height="" width="" /></li>
+	<li><img data-original="../gv/path/to/image4.jpg" src="../css/grey.gif" alt="image4" height="" width="" /></li>
 	```
 	
 	Put placeholder image into src attribute and store real image url in data-original attribute. The browser won't load the real images until the GalleryView is initialized (that is, when <code>$('#id_of_list').galleryView()</code> is called). This feature is inspired by the [Lazy Load Plugin for jQuery](https://github.com/tuupola/jquery_lazyload) by [Mika Tuupola](http://www.appelsiini.net/projects/lazyload).
