@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<head>
+	
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GalleryView - Default Demo</title>
+
+<!-- First, add jQuery (and jQuery UI if using custom easing or animation -->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
+
+<!-- Second, add the Timer and Easing plugins -->
+<script type="text/javascript" src="../dist/js/jquery.timers.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+<!-- Third, add the GalleryView Javascript and CSS files -->
+<link type="text/css" rel="stylesheet" href="../dist/css/galleryview.min.css" />
+<script type="text/javascript" src="../dist/js/jquery.galleryview.min.js"></script>
+
+
+<style>
+	.gv_galleryWrap {margin: auto !important;}
+</style>
+
+<!-- Lastly, call the galleryView() function on your unordered list(s) -->
+<script type="text/javascript">
+	jQuery(function(){
+		jQuery('#myGallery').galleryView();
+	});
+</script>
+</head>
+
+<body>
+	
+	<div style="text-align: center;margin-top: 200px;">
+	
+	<h1> GalleryView Default Demo </h1>
+	
+	<ul id="myGallery" class="galleryView">
+		<li><img src="images/slide1.jpg" alt="Lone Tree Yellowstone" width="990" height="658" />
+		<li><img src="images/slide2.jpg" alt="Is He Still There?!"  width="990" height="677"  />
+		<li><img src="images/slide3.jpg" alt="Noni Nectar For Green Gecko" width="990" height="1321"  />
+		<li><img src="images/slide4.jpg" alt="Flight of an Eagle Owl" width="990" height="658" />
+		<li><img src="images/slide5.jpg" alt="Winter Lollipops" width="990" height="1485" />
+		<li><img src="images/slide6.jpg" alt="Day of Youth" width="990" height="660" />
+		<li><img src="images/slide7.jpg" alt="Sunbathing Underwater" width="990" height="660" />
+		<li><img src="images/slide8.jpg" alt="Untitled" width="990" height="660" />
+		<li><img src="images/slide9.jpg" alt="New Orleans Streetcar" width="990" height="659" />
+		<li><img src="images/slide10.jpg" alt="By The Wind of Chance" width="990" height="704" />
+		<li><img src="images/slide11.jpg" alt="Fishing on the Cloud" width="990" height="660" />
+		<li><img src="images/slide12.jpg" alt="Blue Lagoon" width="990" height="660" />
+		<li><img src="images/slide13.jpg" alt="Time" width="990" height="660" />
+	</ul>
+	
+	<p>Please view the source of this page if you are having difficulties setting up GalleryView.</p>
+	
+	</div>
+	
+	
+</body>
+</html>
