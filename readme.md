@@ -12,6 +12,7 @@ This section will be updated soon.
 
 ---
 
+
 # Getting Started
 1. Place galleryview-x.x folder somewhere in your website directory structure (you can rename this folder if desired)
 
